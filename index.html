@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
     <title>AI POEMS</title>
 </head>
 <body>
+    <div class="container">
     <header>
     <h1>
         AI POEMS
@@ -14,11 +20,11 @@
     </header>
     <main>
         <form>
-            <input type="text" placeholder="Enter the title of the poem" autofocus
-            required/>
-            <input type="submit" />
+            <input type="text" placeholder="Enter the title of the poem" 
+            class="search" autofocus required/>
+            <input type="submit" class="submit" />
         </form>
-        <div>
+        <div class="dance-style">
             we'll have a poem here
             <br />
             another line
@@ -31,6 +37,7 @@
         open sourced on Github</a> and is hosted on
         <a href="https://ai-poems-project.netlify.app">netlify</a>
     </footer>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
