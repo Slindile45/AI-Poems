@@ -1,10 +1,17 @@
+body {
+   background-image: url("image.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-family: "Edu AU VIC WA NT Hand", cursive;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+}
+
 h1 {
     text-align: center;
     list-style: 1.5;
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400 36px;
-    font-style: normal;
+    font-size: 48px;
 }
 
 form {
@@ -12,13 +19,8 @@ form {
 }
 
 .dance-style {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
-    padding: 20px;
-    line-height: 1.5;
+    font-size: 16px;
+
 }
 
 .container {
@@ -29,11 +31,12 @@ form {
 
 .search {
     padding: 12px;
+    border-color:#87CCBE ;
     border-radius: 10px;
     width: 80%;
 }
 
-.poem {
+.health {
     display: none;
 }
 
@@ -49,4 +52,6 @@ a {
 .submit {
     padding: 12px;
     border-radius: 10px;
+    border: none;
+    background-color: #87CCBE;
 }

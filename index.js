@@ -1,6 +1,6 @@
-function displayPoem(response) {
+function answerQuestion(response) {
     
-    new Typewriter("#poem", {
+    new Typewriter("#womens-health", {
       strings: response.data.answer,
       autoStart: true,
       delay: 20,
@@ -9,21 +9,21 @@ function displayPoem(response) {
 
 }
 
-function generatePoem(event) {
+function womensHealth(event) {
     event.preventDefault();
     let instructionInput = document.querySelector("#user-instructions")
     let apiKey = "33949tfa196efed4510bo9b38e1b5809";
-    let context = "You are a poem expert and you mission is to generate a 4 line poem in basic html. Make sure to follow the user instructions";
-    let prompt = `user-instructions: generate an English poem about ${instructionInput.value}`;
+    let context = "You are a women's health expert and very informed on the latest health, fitness, weight loss, nutrition, and beauty news and trends. Please provide a short and simple answer. Make sure to follow the user instructions";
+    let prompt = `user-instructions: please answer questions about ${instructionInput.value} in a fun and engaging way`;
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
     
-    let poemElement = document.querySelector("#poem");
-    poemElement.classList.remove("poem");
-    poemElement.innerHTML = `Generating an English poem about ${instructionInput.value}`
+    let healthElement = document.querySelector("#womens-health");
+    healthElement.classList.remove("health");
+    healthElement.innerHTML = `leading you to a happier, healthier life, please wait...`
     
-    axios.get(apiUrl).then(displayPoem);
+    axios.get(apiUrl).then(answerQuestion);
 
 }
 
-let poemFormElement = document.querySelector("#poem-generator");
-poemFormElement.addEventListener("submit", generatePoem);
+let healthFormElement = document.querySelector("#health-generator");
+healthFormElement.addEventListener("submit", womensHealth);
